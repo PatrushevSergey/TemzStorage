@@ -11,8 +11,7 @@
     <script src="Resources/js/jquery.min.js"></script>
     <script src="Resources/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <link href="Resources/js/jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet" type="text/css">
-    <style> <%@include file="../css/table.css"%></style>
-    <style> <%@include file="../css/main.css"%></style>
+    <link href="Resources/main.css" rel="stylesheet">
 
 
 
@@ -75,41 +74,8 @@
 
 
 <div class="leftMenu">
-    <form action="/main" method="get">
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        <button type="submit" class="button">Главная</button>
-    </form>
-    <form action="/viewProduct" method="get">
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        <button type="submit" class="button">Показать детали</button>
-    </form>
-    <form action="/createOrder" method="get">
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        <button type="submit" class="button">Новый заказ</button>
-    </form>
-    <form action="/viewOrder" method="get">
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        <button type="submit" class="button">Показать заказы</button>
-    </form>
 
-
-    <form action="/createTool" method="get">
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        <button type="submit" class="button">Новый инструмент</button>
-    </form>
-    <form action="/createIn" method="post">
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        <button type="submit" class="button">Приход</button>
-    </form>
-    <form action="/createOut" method="post">
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        <button type="submit" class="button">Расход</button>
-    </form>
-
-    <form action=/logout method="post">
-        <button type="submit"  class="button" value="Выход" >Выход</button>
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-    </form>
+    <%@include file="LeftMenu.jsp"%>
 
 
 </div>

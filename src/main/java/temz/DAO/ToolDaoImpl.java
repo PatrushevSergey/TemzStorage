@@ -23,7 +23,6 @@ public class ToolDaoImpl implements ToolDAO {
         template.save(tool);
     }
 
-    @Override
     public ToolEntity findByLabel(String label) {
         return (ToolEntity)template.find("from ToolEntity where label=?", label).get(0);
     }

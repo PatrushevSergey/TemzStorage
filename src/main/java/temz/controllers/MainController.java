@@ -16,7 +16,7 @@ import java.util.Set;
 
 /**
  * Created by Сергей on 05.09.2017.
- * Контроллер, ответственный за инструмент все служебные действия
+ * Контроллер, ответственный за служебные действия
  */
 @Controller
 public class MainController {
